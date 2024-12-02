@@ -1,0 +1,86 @@
+:root {
+    --background-color: #f0f0f0; /* Light background */
+    --text-color: #333333; /* Dark text */
+    --border-color: #007BFF; /* Blue border */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+h1 {
+    color: var(--border-color);
+    font-size: 1.5em; /* Responsive font size */
+}
+
+#themeToggle {
+    margin: 20px 0; /* Add margin for spacing */
+    padding: 10px 20px; /* Add padding for better button size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: var(--border-color); /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+#themeToggle:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; /* Add space between images */
+}
+
+.uploaded-image {
+    width: 150px; /* Set a fixed width for images */
+    height: auto;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.uploaded-image:hover {
+    transform: scale(1.05); /* Scale up on hover for better visibility */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    #themeToggle {
+        width: 100%; /* Full width button on mobile */
+        padding: 15px; /* Increased padding for better touch targets */
+    }
+
+    .uploaded-image {
+        width: 100px; /* Smaller images on mobile */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1em; /* Further reduce font size for very small screens */
+    }
+
+    #themeToggle {
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+}
+
+/* Dark theme styles */
+body.dark {
+    --background-color: #2c2c2c; /* Dark background */
+    --text-color: #ffffff; /* White text */
+    --border-color: #0056b3; /* Darker blue border */
+}
